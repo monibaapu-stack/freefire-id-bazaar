@@ -1,0 +1,458 @@
+!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FF ID Bazaar - ফ্রি ফায়ার আইডি কিনুন-বেচুন</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Roboto+Mono:wght@400;500&display=swap');
+        
+        :root {
+            --primary: #ff6600;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .gaming-font {
+            font-family: 'Roboto Mono', monospace;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(90deg, #1a1a2e, #16213e);
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(255 102 0 / 0.2);
+        }
+        
+        .navbar {
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-[#0f0f1a] text-white">
+
+    <!-- Navbar -->
+    <nav class="navbar bg-[#0f0f1a]/90 border-b border-orange-500/30 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center text-2xl shadow-lg">
+                    🔥
+                </div>
+                <div>
+                    <h1 class="text-2xl font-bold tracking-tighter gaming-font">FF ID <span class="text-orange-500">BAZAAR</span></h1>
+                    <p class="text-[10px] text-orange-400 -mt-1">ফ্রি ফায়ার আইডি মার্কেটপ্লেস</p>
+                </div>
+            </div>
+
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#posts" class="hover:text-orange-400 transition">সব আইডি</a>
+                <a href="#how" class="hover:text-orange-400 transition">কিভাবে কাজ করে</a>
+                <a href="#post-form" class="hover:text-orange-400 transition">আইডি পোস্ট করুন</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <div id="user-info" class="hidden items-center gap-2 bg-[#1f1f2e] px-4 py-2 rounded-3xl text-sm">
+                    <i class="fa-solid fa-circle-check text-green-400"></i>
+                    <span id="user-email" class="font-medium"></span>
+                </div>
+                
+                <button onclick="googleSignIn()" 
+                        id="login-btn"
+                        class="flex items-center gap-2 bg-white text-black px-6 py-3 rounded-3xl font-semibold hover:bg-orange-400 hover:text-white transition">
+                    <i class="fa-brands fa-google"></i>
+                    Google দিয়ে সাইন ইন
+                </button>
+                
+                <button onclick="toggleMobileMenu()" class="md:hidden text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#1a1a2e] border-t border-orange-500/30 px-6 py-4">
+            <a href="#posts" class="block py-3 text-lg">সব আইডি</a>
+            <a href="#how" class="block py-3 text-lg">কিভাবে কাজ করে</a>
+            <a href="#post-form" class="block py-3 text-lg">আইডি পোস্ট করুন</a>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <header class="hero-bg py-16 border-b-4 border-orange-500">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <div class="inline-flex items-center gap-2 bg-orange-500/10 text-orange-400 text-sm font-medium px-6 py-3 rounded-3xl mb-6">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        ১০০% সিকিউর মিডলম্যান সার্ভিস
+                    </div>
+                    
+                    <h2 class="text-5xl md:text-6xl font-bold leading-none mb-6">
+                        ফ্রি ফায়ার আইডি<br>
+                        <span class="text-orange-500">কিনুন • বেচুন • সেফলি</span>
+                    </h2>
+                    
+                    <div class="bg-white/10 backdrop-blur-xl border border-orange-500/30 rounded-3xl p-8 mb-8">
+                        <p class="text-xl font-semibold mb-6 flex items-center gap-3">
+                            <span class="text-3xl">📌</span>
+                            আইডি কেনার জন্য শিওর হলে 
+                            <a href="https://wa.me/8801786915087" target="_blank" 
+                               class="text-orange-400 hover:underline font-mono">01786915087</a> 
+                            হোয়াটসঅ্যাপ এ মেসেজ দিন
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-8">
+                            <div>
+                                <p class="text-xs text-gray-400 mb-1">বিকাশ</p>
+                                <a href="https://www.bkash.com/" target="_blank" 
+                                   class="text-3xl font-bold font-mono tracking-widest">01717184438</a>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400 mb-1">নগদ</p>
+                                <a href="#" class="text-3xl font-bold font-mono tracking-widest">01786915087</a>
+                            </div>
+                        </div>
+                        
+                        <p class="text-sm text-gray-400 mt-8 border-t border-white/20 pt-6">
+                            এভাবে নিচে লাগবে না। ওয়েবসাইটে কোনো প্রকার অ্যাড দেখানো হবে না।
+                        </p>
+                    </div>
+                    
+                    <div class="text-sm flex items-center gap-8 text-gray-400">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-lock"></i>
+                            সেলার আইডি+পাসওয়ার্ড আমাকে দিবে
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-money-bill-wave"></i>
+                            ক্রেতা পেমেন্ট বিকাশ/নগদে করবে
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex justify-center">
+                    <div class="relative">
+                        <div class="w-80 h-80 bg-gradient-to-br from-orange-500/20 to-transparent rounded-[4rem] rotate-12 flex items-center justify-center border-8 border-orange-400/30">
+                            <div class="text-center -rotate-12">
+                                <i class="fa-solid fa-gamepad text-8xl text-orange-400 mb-6"></i>
+                                <p class="text-2xl font-bold">FREE FIRE</p>
+                                <p class="text-xl text-orange-400">ID MARKET</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- How it Works -->
+    <section id="how" class="max-w-7xl mx-auto px-6 py-20">
+        <h2 class="text-4xl font-bold text-center mb-12">কিভাবে কাজ করে এই ওয়েবসাইট?</h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-[#1f1f2e] rounded-3xl p-8">
+                <div class="text-5xl mb-6">1️⃣</div>
+                <h3 class="text-2xl font-semibold mb-3">বিক্রেতা</h3>
+                <ul class="space-y-3 text-gray-300">
+                    <li class="flex gap-3"><i class="fa-solid fa-video text-orange-400 mt-1"></i> আইডির ভিডিও পোস্ট করুন</li>
+                    <li class="flex gap-3"><i class="fa-solid fa-whatsapp text-green-400 mt-1"></i> আপনার WhatsApp নম্বর দিন</li>
+                    <li class="flex gap-3"><i class="fa-solid fa-envelope text-blue-400 mt-1"></i> Gmail দিন</li>
+                    <li class="flex gap-3"><i class="fa-solid fa-key text-orange-400 mt-1"></i> আইডি নম্বর + পাসওয়ার্ড আমাকে দিন</li>
+                </ul>
+            </div>
+            
+            <div class="bg-[#1f1f2e] rounded-3xl p-8">
+                <div class="text-5xl mb-6">2️⃣</div>
+                <h3 class="text-2xl font-semibold mb-3">ক্রেতা</h3>
+                <ul class="space-y-3 text-gray-300">
+                    <li class="flex gap-3"><i class="fa-solid fa-eye text-orange-400 mt-1"></i> ভিডিও দেখুন</li>
+                    <li class="flex gap-3"><i class="fa-solid fa-cart-shopping text-orange-400 mt-1"></i> Buy বাটনে ক্লিক করুন</li>
+                    <li class="flex gap-3"><i class="fa-solid fa-comments text-green-400 mt-1"></i> সেলারের সাথে সরাসরি WhatsApp চ্যাট</li>
+                    <li class="flex gap-3"><i class="fa-solid fa-handshake text-orange-400 mt-1"></i> পেমেন্ট করুন আমার বিকাশ/নগদে</li>
+                </ul>
+            </div>
+            
+            <div class="bg-[#1f1f2e] rounded-3xl p-8">
+                <div class="text-5xl mb-6">3️⃣</div>
+                <h3 class="text-2xl font-semibold mb-3">সিকিউরিটি গ্যারান্টি</h3>
+                <div class="text-gray-300 leading-relaxed">
+                    ১৫ দিন পর ক্রেতা রিকভারি Gmail সহ আইডি+পাসওয়ার্ড নিয়ে যাবেন।<br><br>
+                    যদি বিক্রেতা আইডি চেঞ্জ করে, শিফট করে বা রিকভারি মেইল রিমুভ করে — 
+                    <span class="font-bold text-red-400">ডিল ক্যান্সেল + পুরো টাকা ফেরত</span> বিকাশ/নগদে।
+                </div>
+                <div class="mt-6 text-xs bg-green-900/30 text-green-300 px-4 py-3 rounded-2xl flex items-center gap-2">
+                    <i class="fa-solid fa-check-circle"></i>
+                    আমি মিডলম্যান হিসেবে পুরো দায়িত্ব নিচ্ছি
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Posts Section -->
+    <section id="posts" class="max-w-7xl mx-auto px-6 py-16 bg-[#1a1a2e]">
+        <div class="flex justify-between items-end mb-10">
+            <h2 class="text-4xl font-bold">সব অ্যাকটিভ আইডি পোস্ট</h2>
+            <div onclick="refreshPosts()" class="flex items-center gap-2 text-orange-400 cursor-pointer hover:text-orange-300">
+                <i class="fa-solid fa-rotate"></i>
+                <span class="text-sm font-medium">রিফ্রেশ</span>
+            </div>
+        </div>
+        
+        <div id="posts-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- JS দিয়ে পোস্টগুলো এখানে আসবে -->
+        </div>
+    </section>
+
+    <!-- Post Your ID Form -->
+    <section id="post-form" class="max-w-7xl mx-auto px-6 py-20">
+        <div class="max-w-2xl mx-auto bg-[#1f1f2e] rounded-3xl p-10">
+            <h2 class="text-4xl font-bold mb-8 text-center">আপনার আইডি পোস্ট করুন</h2>
+            
+            <div id="form-login-warning" class="hidden bg-red-500/10 border border-red-400 text-red-400 p-4 rounded-2xl mb-6 text-center">
+                পোস্ট করার জন্য অবশ্যই Google দিয়ে সাইন ইন করতে হবে
+            </div>
+            
+            <form id="postForm" onsubmit="submitPost(event)">
+                <div class="space-y-6">
+                    <!-- Video URL -->
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-2">আইডির ভিডিও লিংক (MP4 বা YouTube লিংক)</label>
+                        <input type="text" id="video-url" 
+                               class="w-full bg-[#2a2a3a] border border-gray-600 focus:border-orange-400 rounded-2xl px-6 py-4 text-white outline-none"
+                               placeholder="https://example.com/your-id-video.mp4" required>
+                    </div>
+                    
+                    <!-- WhatsApp -->
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-2">আপনার WhatsApp নম্বর (০১xxxxxxxxx)</label>
+                        <input type="tel" id="whatsapp" 
+                               class="w-full bg-[#2a2a3a] border border-gray-600 focus:border-orange-400 rounded-2xl px-6 py-4 text-white outline-none font-mono"
+                               placeholder="017xxxxxxxx" required>
+                    </div>
+                    
+                    <!-- Gmail -->
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-2">আপনার Gmail</label>
+                        <input type="email" id="gmail" 
+                               class="w-full bg-[#2a2a3a] border border-gray-600 focus:border-orange-400 rounded-2xl px-6 py-4 text-white outline-none"
+                               placeholder="your@gmail.com" required>
+                    </div>
+                    
+                    <!-- Optional Description -->
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-2">আইডির বর্ণনা (লেভেল, স্কিন ইত্যাদি)</label>
+                        <textarea id="description" rows="3"
+                                  class="w-full bg-[#2a2a3a] border border-gray-600 focus:border-orange-400 rounded-2xl px-6 py-4 text-white outline-none resize-none"
+                                  placeholder="BOOYAH লেভেল ৬৫, অনেক রেয়ার স্কিন আছে..."></textarea>
+                    </div>
+                    
+                    <button type="submit" 
+                            class="w-full bg-gradient-to-r from-orange-500 to-red-600 py-5 text-xl font-semibold rounded-3xl hover:from-orange-600 hover:to-red-700 transition flex items-center justify-center gap-3">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        পোস্ট করুন
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-orange-500/20">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-gray-500 text-sm">© 2026 FF ID Bazaar • কোনো অ্যাড নেই • শুধুমাত্র ফ্রি ফায়ার আইডি ট্রেডিং</p>
+            <p class="text-[10px] text-gray-600 mt-4">মিডলম্যান: Rifat • সব ডিল ১৫ দিনের সিকিউর গ্যারান্টি</p>
+        </div>
+    </footer>
+
+    <!-- Toast -->
+    <div id="toast" class="hidden fixed bottom-6 right-6 bg-green-600 text-white px-6 py-4 rounded-3xl shadow-2xl flex items-center gap-3">
+        <i class="fa-solid fa-check-circle"></i>
+        <span id="toast-text" class="font-medium"></span>
+    </div>
+
+    <script>
+        // Tailwind script already loaded
+        function initializeTailwind() {
+            // Already included via CDN
+        }
+
+        // Fake initial posts
+        let posts = [
+            {
+                id: 1,
+                videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny_320x180_10s_1MB.mp4",
+                whatsapp: "01786915087",
+                gmail: "seller1@gmail.com",
+                description: "Level 70 | Legendary Bundle + All Elite Skins | BOOYAH King",
+                timestamp: "২ ঘণ্টা আগে"
+            },
+            {
+                id: 2,
+                videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream_320x180_10s_1MB.mp4",
+                whatsapp: "01812345678",
+                gmail: "proplayerff@gmail.com",
+                description: "Level 85 | Full Maxed Account | ১২০+ রেয়ার আইটেম",
+                timestamp: "৫ ঘণ্টা আগে"
+            },
+            {
+                id: 3,
+                videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel_320x180_10s_1MB.mp4",
+                whatsapp: "01987654321",
+                gmail: "ffidpro.bd@gmail.com",
+                description: "Level 55 | New Season Bundle | Perfect for New Player",
+                timestamp: "১ দিন আগে"
+            }
+        ]
+
+        let currentUser = null
+
+        // Render all posts
+        function renderPosts() {
+            const container = document.getElementById('posts-container')
+            container.innerHTML = ''
+
+            posts.forEach(post => {
+                const cardHTML = `
+                <div class="card-hover bg-[#1f1f2e] rounded-3xl overflow-hidden border border-orange-500/10">
+                    <div class="relative">
+                        <video src="${post.videoUrl}" class="w-full aspect-video object-cover" controls muted></video>
+                        <div class="absolute top-4 left-4 bg-black/70 text-xs px-3 py-1 rounded-3xl font-mono">${post.timestamp}</div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-orange-400 font-medium text-sm mb-1">বিক্রেতার তথ্য</p>
+                        <div class="flex justify-between items-center mb-6">
+                            <div>
+                                <a href="https://wa.me/88${post.whatsapp}" target="_blank"
+                                   class="flex items-center gap-2 text-green-400 hover:text-green-300">
+                                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                                    <span class="font-mono">${post.whatsapp}</span>
+                                </a>
+                            </div>
+                            <div class="text-xs bg-blue-900/40 text-blue-300 px-4 py-2 rounded-3xl">
+                                ${post.gmail}
+                            </div>
+                        </div>
+                        
+                        <p class="line-clamp-2 mb-6 text-gray-300">${post.description}</p>
+                        
+                        <button onclick="handleBuyClick('\( {post.whatsapp}', ' \){post.description}')"
+                                class="w-full bg-gradient-to-r from-green-500 to-emerald-600 py-4 rounded-3xl font-bold flex items-center justify-center gap-3 text-lg">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            BUY NOW - সরাসরি চ্যাট
+                        </button>
+                    </div>
+                </div>`
+                
+                container.innerHTML += cardHTML
+            })
+            
+            if (posts.length === 0) {
+                container.innerHTML = `<p class="text-center text-gray-400 col-span-3 py-12">এখনো কোনো পোস্ট নেই। প্রথম পোস্টটি করুন!</p>`
+            }
+        }
+
+        // Handle Buy button
+        function handleBuyClick(whatsapp, description) {
+            const message = encodeURIComponent(`হ্যালো, আমি আপনার ফ্রি ফায়ার আইডি কিনতে চাই।\n\n${description}\n\nআমি আপনার পোস্ট দেখে যোগাযোগ করছি।`)
+            window.open(`https://wa.me/88\( {whatsapp}?text= \){message}`, '_blank')
+        }
+
+        // Submit new post
+        function submitPost(e) {
+            e.preventDefault()
+            
+            if (!currentUser) {
+                document.getElementById('form-login-warning').classList.remove('hidden')
+                setTimeout(() => {
+                    document.getElementById('form-login-warning').classList.add('hidden')
+                }, 4000)
+                return
+            }
+            
+            const videoUrl = document.getElementById('video-url').value
+            const whatsapp = document.getElementById('whatsapp').value
+            const gmail = document.getElementById('gmail').value
+            const description = document.getElementById('description').value || "কোনো বর্ণনা দেয়া হয়নি"
+            
+            // Add new post
+            posts.unshift({
+                id: Date.now(),
+                videoUrl: videoUrl,
+                whatsapp: whatsapp,
+                gmail: gmail,
+                description: description,
+                timestamp: "এখনই"
+            })
+            
+            renderPosts()
+            
+            //Show toast
+        showToast("✅ আপনার আইডি সফলভাবে পোস্ট হয়েছে!")
+    }
+
+    // Google Sign In (Demo)
+    function googleSignIn() {
+        currentUser = {
+            email: "your.email@gmail.com"
+        }
+        
+        document.getElementById('login-btn').classList.add('hidden')
+        const userInfo = document.getElementById('user-info')
+        if (userInfo) userInfo.classList.remove('hidden')
+        
+        showToast("🎉 Google দিয়ে সাইন ইন সফল হয়েছে!")
+    }
+
+    // Toast notification
+    function showToast(text) {
+        const toast = document.getElementById('toast')
+        if (!toast) return
+        
+        const toastText = document.getElementById('toast-text')
+        if (toastText) toastText.innerHTML = text
+        
+        toast.classList.remove('hidden')
+        toast.style.display = 'flex'
+        
+        setTimeout(() => {
+            toast.classList.add('hidden')
+            toast.style.display = 'none'
+        }, 3000)
+    }
+
+    // Handle Buy button
+    function handleBuyClick(whatsapp, description) {
+        const message = encodeURIComponent(`হ্যালো, আমি আপনার ফ্রি ফায়ার আইডি কিনতে চাই।\n\n${description}\n\nআমি আপনার পোস্ট দেখে যোগাযোগ করছি।`)
+        window.open(`https://wa.me/88\( {whatsapp}?text= \){message}`, '_blank')
+    }
+
+    // Refresh posts
+    function refreshPosts() {
+        renderPosts()
+        showToast("🔄 পোস্ট রিফ্রেশ করা হয়েছে")
+    }
+
+    // Toggle mobile menu
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu')
+        if (menu) menu.classList.toggle('hidden')
+    }
+
+    // Initialize everything
+    window.onload = function() {
+        renderPosts()
+        console.log('%c✅ FF ID Bazaar ওয়েবসাইট রেডি!', 'color: #ff6600; font-size: 16px;')
+    }
+</script>
+</body>
+</html>
